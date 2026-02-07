@@ -19,4 +19,16 @@ export default defineConfig({
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
+  preview: {
+    // Allow Vite preview to bind to the Render host and port.
+    // Render provides a hostname like opportunityxfintechwebapp-5.onrender.com
+    host: true,
+    port: Number(process.env.PORT) || 3000,
+    // Accept the specific Render host and any onrender.com subdomain.
+    allowedHosts: [
+      'opportunityxfintechwebapp-5.onrender.com',
+      '.onrender.com',
+      'localhost',
+    ],
+  },
 })
