@@ -324,13 +324,23 @@ export function WonBids() {
               </div>
             </div>
 
-            <button
-              onClick={handleApplyForCredit}
-              className="w-full md:w-auto bg-white text-amber-600 px-8 py-4 rounded-xl hover:bg-amber-50 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-lg"
-            >
-              <Sparkles className="w-5 h-5" />
-              <span>Apply for Credit Now</span>
-            </button>
+            <div className="flex flex-col md:flex-row gap-4">
+              <button
+                onClick={handleApplyForCredit}
+                className="flex-1 bg-white text-amber-600 px-8 py-4 rounded-xl hover:bg-amber-50 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-lg"
+              >
+                <Sparkles className="w-5 h-5" />
+                <span>Apply for Credit Now</span>
+              </button>
+              
+              <button
+                onClick={() => navigate("/metal-capital-dashboard")}
+                className="flex-1 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all border border-white/20 flex items-center justify-center gap-2 text-lg"
+              >
+                <Building2 className="w-5 h-5" />
+                <span>Go to Metal Capital Dashboard</span>
+              </button>
+            </div>
 
             <p className="text-amber-100 text-xs mt-4">
               *Terms and conditions apply. Subject to credit approval.

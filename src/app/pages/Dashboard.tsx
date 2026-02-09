@@ -92,7 +92,7 @@ export function Dashboard() {
       icon: Sparkles,
       iconColor: "text-green-600",
       iconBg: "bg-green-100",
-      title: "New tender matched",
+      title: "New tender matched in the past 24 hrs",
       description: "Industrial Valves - Karnataka PWD",
       time: "2 hours ago",
       actionText: "View Tender",
@@ -135,22 +135,22 @@ export function Dashboard() {
             </h1>
             <nav className="hidden md:flex items-center gap-6">
               <button
-                onClick={() => navigate("/tenders")}
+                onClick={() => navigate("/tenders", { state: { filter: "all" } })}
                 className="text-gray-700 hover:text-indigo-600 transition-colors"
               >
-                My Tenders
+                All Tenders
+              </button>
+              <button
+                onClick={() => navigate("/tenders", { state: { filter: "past-24hrs" } })}
+                className="text-gray-700 hover:text-indigo-600 transition-colors"
+              >
+                Past 24 Hours
               </button>
               <button 
                 onClick={() => navigate("/saved-bids")}
                 className="text-gray-700 hover:text-indigo-600 transition-colors flex items-center gap-2">
                 <Bookmark className="w-4 h-4" />
                 Saved Bids
-              </button>
-              <button
-                onClick={() => navigate("/tenders")}
-                className="text-gray-700 hover:text-indigo-600 transition-colors"
-              >
-                New Tenders
               </button>
               <button
                 onClick={() => navigate("/profile")}

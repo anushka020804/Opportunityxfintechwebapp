@@ -69,8 +69,9 @@ export function LandingPage() {
               
               {/* Advertisement Badge */}
               <div className="absolute top-4 right-4 z-20">
-                <span className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full border border-amber-200">
-                  Advertisement
+                <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full border border-green-200 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                  Live
                 </span>
               </div>
               
@@ -88,14 +89,26 @@ export function LandingPage() {
                   Quick financing for tender requirements
                 </p>
 
-                {/* Apply Now Button */}
-                <button
-                  onClick={handleMetalCapitalApply}
-                  className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-6 py-3.5 rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
-                >
-                  <span>Apply Now</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
+                {/* Buttons */}
+                <div className="space-y-3">
+                  {/* Apply Now Button */}
+                  <button
+                    onClick={handleMetalCapitalApply}
+                    className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-6 py-3.5 rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                  >
+                    <span>Apply Now</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                  
+                  {/* Go to Dashboard Button */}
+                  <button
+                    onClick={() => navigate("/metal-capital-dashboard")}
+                    className="w-full bg-white text-amber-600 px-6 py-3.5 rounded-xl hover:bg-amber-50 transition-all duration-300 flex items-center justify-center gap-2 border border-amber-200 shadow-sm hover:shadow-md"
+                  >
+                    <span>Go to Dashboard</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
             </div>
           </motion.div>

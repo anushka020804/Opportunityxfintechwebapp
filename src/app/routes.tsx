@@ -12,6 +12,7 @@ import { EligibilityFlow } from "./pages/EligibilityFlow";
 import { UserProfile } from "./pages/UserProfile";
 import { SavedBids } from "./pages/SavedBids";
 import { WonBids } from "./pages/WonBids";
+import { MetalCapitalDashboard } from "./pages/MetalCapitalDashboard";
 
 export const router = createBrowserRouter([
   {
@@ -65,5 +66,9 @@ export const router = createBrowserRouter([
   {
     path: "/won-bids",
     Component: WonBids,
+  },
+  {
+    path: "/metal-capital-dashboard",
+    Component: MetalCapitalDashboard,
   },
 ]);
